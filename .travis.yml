@@ -15,6 +15,8 @@ cache:
 install:
   # install all of the dependencies you need here
   - $HOME/c9sdk/scripts/install-sdk.sh
+  
+before_script: "node server.js -p 8080 -a : --collab"
 
-script: "node server.js -p 8080 -a : --collab"
+script: true
   # execute all of the commands which should make the build pass or fail
