@@ -9,7 +9,7 @@ before_install:
   
 cache:
   directories:
-    #- $HOME/c9sdk
+    - $HOME/c9sdk
     - node_modules
 
 install:
