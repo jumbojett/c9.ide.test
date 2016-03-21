@@ -11,6 +11,7 @@ cache:
   directories:
     - $HOME/c9sdk
     - node_modules
+    - $HOME/.c9
 
 install:
   # install all of the dependencies you need here
