@@ -5,7 +5,7 @@ node_js:
 before_install:
   # execute all of the commands which need to be executed 
   # before installing dependencies
-  - if ! cd $HOME/c9sdk && git pull; then git clone https://github.com/c9/core.git $HOME/c9sdk; fi
+  - cd $HOME/c9sdk && git pull || git clone https://github.com/c9/core.git $HOME/c9sdk
   
 cache:
   directories:
