@@ -5,7 +5,7 @@ node_js:
 before_install:
   # execute all of the commands which need to be executed 
   # before installing dependencies
-  - if cd $HOME/c9sdk; then git pull; else git clone https://github.com/c9/core.git $HOME/c9sdk && cd $_; fi
+  - if cd $HOME/c9sdk; then git pull; else git clone https://github.com/c9/core.git $HOME/c9sdk; fi
   
 cache:
   directories:
@@ -14,7 +14,7 @@ cache:
 
 install:
   # install all of the dependencies you need here
-  - scripts/install-sdk.sh
+  - $HOME/c9sdk/scripts/install-sdk.sh
 
 script: "node server.js -p 8080 -a : --collab"
   # execute all of the commands which should make the build pass or fail
