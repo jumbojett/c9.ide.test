@@ -20,5 +20,5 @@ install:
 before_script: "node server.js -p 8080 -a : --collab &"
 
 script: 
-  - ps aux | grep "server.js"|grep -qv grep
+  - ps aux | grep "sever.js"|grep -qv grep
   # execute all of the commands which should make the build pass or fail
