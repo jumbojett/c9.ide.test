@@ -15,9 +15,9 @@ cache:
 
 install:
   # install all of the dependencies you need here
-  - $HOME/c9sdk/scripts/install-sdk.sh
+  #- $HOME/c9sdk/scripts/install-sdk.sh
   
-before_script: "node server.js -p 8080 -a : --collab"
+before_script: "node server.js -p 8080 -a : --collab &"
 
 script: 
   - ps aux | grep "server.js"|grep -qv grep
