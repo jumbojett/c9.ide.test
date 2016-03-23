@@ -20,5 +20,8 @@ install:
 before_script: "node server.js -p 8080 -a : --collab &"
 
 script: 
+   # execute all of the commands which should make the build pass or fail
+   # give the node server some time to fire up and then check to see if it's still running
+  - sleep 1m
   - ps aux | grep "server.js"|grep -qv grep
-  # execute all of the commands which should make the build pass or fail
+ 
